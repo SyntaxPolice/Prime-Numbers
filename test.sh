@@ -14,7 +14,10 @@ echo '  ________________________________________
 >                  ||----w |
 >                  ||     ||'
 
-python test_poly_divmod.py
-python test_poly_gcd.py
-python test_sieve.py
-python testing.py
+LOG=testLog-`date "+%Y-%m-%d-%H:%M:%S"`.txt
+
+echo "Outputing to $LOG"
+python test_poly_divmod.py > $LOG
+python test_poly_gcd.py >> $LOG
+python test_sieve.py >> $LOG
+python testing.py >> $LOG
